@@ -1,0 +1,11 @@
+#!/bin/sh
+
+option=$(printf '%s\n%s' \
+	'shutdown' \
+	'reboot' \
+	| dmenu)
+
+case $option in
+	'shutdown') systemctl poweroff;;
+	'reboot') systemctl reboot;;
+esac

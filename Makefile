@@ -1,9 +1,9 @@
-all: directories install
+all: install
 
 directories:
 	mkdir -p ~/.local/bin
 
-install:
+install: directories
 	cp dm-power ~/.local/bin && chmod +x ~/.local/bin/dm-power
 
 uninstall:

@@ -4,7 +4,7 @@ directories:
 	mkdir -p ~/.local/bin
 
 install: directories
-	cp dm-power ~/.local/bin && chmod +x ~/.local/bin/dm-power
+	cp dm-power ~/.local/bin
 
 uninstall:
 	rm -f ~/.local/bin/dm-power

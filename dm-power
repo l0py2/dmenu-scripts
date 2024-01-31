@@ -1,11 +1,13 @@
 #!/bin/sh
 
-option=$(printf '%s\n%s' \
+option=$(printf '%s\n%s\n%s' \
 	'shutdown' \
 	'reboot' \
+	'lock' \
 	| dmenu)
 
 case $option in
 	'shutdown') systemctl poweroff;;
 	'reboot') systemctl reboot;;
+	'lock') slock;;
 esac

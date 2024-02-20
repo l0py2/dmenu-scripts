@@ -3,11 +3,11 @@
 option=$(printf '%s\n%s\n%s' \
 	'shutdown' \
 	'reboot' \
-	'lock' \
+	'suspend' \
 	| dmenu)
 
 case $option in
 	'shutdown') systemctl poweroff;;
 	'reboot') systemctl reboot;;
-	'lock') slock;;
+	'suspend') systemctl suspend;;
 esac
